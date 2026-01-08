@@ -11,7 +11,7 @@ lista=[1, 2, 3, 4, 5]
 print(f'Las estádisitcas de {lista} son:\n'
       f'Valor mínimo: {calcular_estadisticas(lista)[0]}\n'
       f'Valor máximo: {calcular_estadisticas(lista)[1]}\n'
-      f'Valor medio: {calcular_estadisticas(lista)[2]}')s
+      f'Valor medio: {calcular_estadisticas(lista)[2]}')
 print("")
 
 #Crea una función distancia(p1, p2) que reciba dos tuplas representando
