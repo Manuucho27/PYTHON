@@ -9,30 +9,30 @@
         - Muestra como quedan las propiedades de los tres personajes.
 '''
 def configurar_personajes():
-    estadistica_base = 2
+    estadistica_base = 2.0
 
-    caballero = {
+    caballero_dic = {
         'vida': estadistica_base * 2,
         'defensa': estadistica_base * 2,
         'ataque': estadistica_base,
         'alcance': estadistica_base
     }
 
-    guerrero = {
-        'vida': estadistica_base,
-        'defensa': estadistica_base,
-        'ataque': estadistica_base * 2,
-        'alcance': estadistica_base * 2
+    guerrero_dic = {
+        'vida': caballero_dic['vida']/2,
+        'defensa': caballero_dic['defensa']/2,
+        'ataque': caballero_dic['ataque'] * 2,
+        'alcance': caballero_dic['alcance'] * 2
     }
 
-    arquero = {
-        'vida': guerrero['vida'],
-        'defensa': guerrero['defensa'] / 2,
-        'ataque': guerrero['ataque'],
-        'alcance': guerrero['alcance'] * 2
+    arquero_dic = {
+        'vida': guerrero_dic['vida'],
+        'defensa': guerrero_dic['defensa'] / 2,
+        'ataque': guerrero_dic['ataque'],
+        'alcance': guerrero_dic['alcance'] * 2
     }
 
-    return caballero, guerrero, arquero
+    return caballero_dic, guerrero_dic, arquero_dic
 
 caballero, guerrero, arquero = configurar_personajes()
 print("Propiedades del Caballero:", caballero)
