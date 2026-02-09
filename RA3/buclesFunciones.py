@@ -123,11 +123,11 @@ def primosHastaNum():
 
 
 def analisisNotas():
-    print("\nAnálisis de notas de alumnos")
+    print("\nAnálisis de notas.csv de alumnos")
     notas = pedirNotas()
 
     if not notas:
-        print("No se introdujeron notas.")
+        print("No se introdujeron notas.csv.")
     else:
         aprobados = contarAprobados(notas)
         media = calcularMedia(notas)
@@ -180,7 +180,7 @@ def bloque1():
             "3. Adivina el número\n"
             "4. Comprobar si un número es primo\n"
             "5. Números primos hasta N\n"
-            "6. Análisis de notas de alumnos\n"
+            "6. Análisis de notas.csv de alumnos\n"
             "0. Volver al menú principal\n"
             "Elige ejercicio (0-6): "
         )
@@ -202,14 +202,14 @@ def bloque1():
 # === BLOQUE 2 ===
 
 def inventarioInteligente():
-    print("\nControl de inventario inteligente")
+    print("\nControl de inventario.csv inteligente")
     inventario = {}
 
     while True:
         print("\n--- MENÚ INVENTARIO ---")
         print("1. Añadir producto")
         print("2. Vender producto")
-        print("3. Mostrar inventario")
+        print("3. Mostrar inventario.csv")
         print("4. Eliminar producto")
         print("5. Salir al menú principal")
 
@@ -242,7 +242,7 @@ def agregar_producto(inventario):
 def vender_producto(inventario):
     nombre = input("Nombre del producto a vender: ").strip().capitalize()
     if nombre not in inventario:
-        print("Ese producto no existe en el inventario.")
+        print("Ese producto no existe en el inventario.csv.")
         return
     try:
         cantidad = int(input("Cantidad a vender: "))
@@ -261,7 +261,7 @@ def vender_producto(inventario):
 
 def mostrar_inventario(inventario):
     if not inventario:
-        print("El inventario está vacío.")
+        print("El inventario.csv está vacío.")
     else:
         print("\nInventario actual:")
         for prod, cant in inventario.items():
@@ -278,18 +278,18 @@ def eliminar_producto(inventario):
         else:
             print("Operación cancelada.")
     else:
-        print("Ese producto no existe en el inventario.")
+        print("Ese producto no existe en el inventario.csv.")
 
 
 def inventarioSimple():
-    print("\nControl de inventario simple (Manzanas, Plátanos y Peras)")
+    print("\nControl de inventario.csv simple (Manzanas, Plátanos y Peras)")
     manzanas = platanos = peras = 0
 
     while True:
         print("\n--- MENÚ INVENTARIO ---")
         print("1. Añadir stock")
         print("2. Vender producto")
-        print("3. Mostrar inventario")
+        print("3. Mostrar inventario.csv")
         print("4. Volver al menú del bloque")
 
         opcion = input("Elige una opción: ")
@@ -423,8 +423,8 @@ def bloque2():
     while True:
         opcion = input(
             "\n=== BLOQUE 2 ===\n"
-            "1. Control de inventario inteligente\n"
-            "2. Control de inventario simple\n"
+            "1. Control de inventario.csv inteligente\n"
+            "2. Control de inventario.csv simple\n"
             "3. Inversión de dinero\n"
             "4. Menú de restaurante\n"
             "5. Cuenta atrás\n"

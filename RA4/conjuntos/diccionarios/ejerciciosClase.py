@@ -27,7 +27,7 @@ def ej_2():
     teléfono es <teléfono>.'''
 
     diccionario_personas = {}
-    print("Buenos días, necesito que me introduzcas estos datos")
+    print("Buenos días, necesito que me introduzcas estos datos.csv")
     nombre=input("Introduce tu nombre: ")
     edad=int(input("Introduce tu edad: "))
     direccion=input("Introduce tu dirección: ")

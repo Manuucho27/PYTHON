@@ -13,7 +13,7 @@ def bloque1():
             "3. Adivina el número\n"
             "4. Comprobar si un número es primo\n"
             "5. Números primos hasta N\n"
-            "6. Análisis de notas de alumnos\n"
+            "6. Análisis de notas.csv de alumnos\n"
             "0. Volver al menú principal\n"
             "Elige ejercicio (0-6): "
         )
@@ -120,7 +120,7 @@ def bloque1():
                 print("")
 
             case "6":
-                print("\nAnálisis de notas de alumnos")
+                print("\nAnálisis de notas.csv de alumnos")
 
                 notas = []
                 while True:
@@ -136,7 +136,7 @@ def bloque1():
                         print("Error:", e)
 
                 if not notas:
-                    print("No se introdujeron notas.")
+                    print("No se introdujeron notas.csv.")
                 else:
                     aprobados = sum(1 for n in notas if n >= 5)
                     media = sum(notas) / len(notas)
@@ -159,8 +159,8 @@ def bloque2():
     while True:
         opcion = input(
             "\n=== BLOQUE 2 ===\n"
-            "1. Control de inventario inteligente\n"
-            "2. Control de inventario simple\n"
+            "1. Control de inventario.csv inteligente\n"
+            "2. Control de inventario.csv simple\n"
             "3. Inversión de dinero\n"
             "4. Menú de restaurante\n"
             "5. Cuenta atrás\n"
@@ -170,7 +170,7 @@ def bloque2():
 
         match opcion:
             case "1":
-                print("\nControl de inventario inteligente")
+                print("\nControl de inventario.csv inteligente")
 
                 inventario = {}
 
@@ -178,7 +178,7 @@ def bloque2():
                     print("\n--- MENÚ INVENTARIO ---")
                     print("1. Añadir producto")
                     print("2. Vender producto")
-                    print("3. Mostrar inventario")
+                    print("3. Mostrar inventario.csv")
                     print("4. Eliminar producto")
                     print("5. Salir al menú principal")
 
@@ -199,7 +199,7 @@ def bloque2():
                         case "2":
                             nombre = input("Nombre del producto a vender: ").strip().capitalize()
                             if nombre not in inventario:
-                                print("Ese producto no existe en el inventario.")
+                                print("Ese producto no existe en el inventario.csv.")
                                 continue
                             try:
                                 cantidad = int(input("Cantidad a vender: "))
@@ -217,7 +217,7 @@ def bloque2():
 
                         case "3":
                             if not inventario:
-                                print("El inventario está vacío.")
+                                print("El inventario.csv está vacío.")
                             else:
                                 print("\nInventario actual:")
                                 for prod, cant in inventario.items():
@@ -233,7 +233,7 @@ def bloque2():
                                 else:
                                     print("Operación cancelada.")
                             else:
-                                print("Ese producto no existe en el inventario.")
+                                print("Ese producto no existe en el inventario.csv.")
 
                         case "5":
                             print("Volviendo al menú del bloque...")
@@ -243,14 +243,14 @@ def bloque2():
                             print("Opción no válida, intenta de nuevo.")
 
             case "2":
-                print("\nControl de inventario simple (Manzanas, Plátanos y Peras)")
+                print("\nControl de inventario.csv simple (Manzanas, Plátanos y Peras)")
                 manzanas = platanos = peras = 0
 
                 while True:
                     print("\n--- MENÚ INVENTARIO ---")
                     print("1. Añadir stock")
                     print("2. Vender producto")
-                    print("3. Mostrar inventario")
+                    print("3. Mostrar inventario.csv")
                     print("4. Volver al menú del bloque")
 
                     opcion = input("Elige una opción: ")
