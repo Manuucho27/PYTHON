@@ -10,6 +10,6 @@ with open("clientes.csv", "r") as f:
             print(row)
             guardar.append(row)
 
-with open("guardar.csv", "w") as f:
+with open("guardar.csv", "w", newline='') as f:
     writer = csv.writer(f)
     writer.writerows(guardar)
